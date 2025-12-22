@@ -17,4 +17,5 @@
   --bg-color: #000028;
   --bg-image: url('/images/cover-image-dark.png');
   --visible: visible;
+  --page-padding: 10px;
 }

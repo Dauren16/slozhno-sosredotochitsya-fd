@@ -4,6 +4,7 @@
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
   background-attachment: fixed;
   background-image: var(--bg-image);
+  background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   font-family: var(--font-family);
@@ -17,7 +18,7 @@
   grid-template-rows: 1fr min-content 1fr auto;
   align-items: center;
   justify-items: end;
-  padding: 10px;
+  padding: var(--page-padding);
 }
 
 .decorated-zone {
@@ -29,8 +30,8 @@
 .decorated-zone::before {
   content: "";
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: var(--page-padding);
+  right: var(--page-padding);
   border-block-start: 1px solid var(--theme-text-borders);
   border-inline-end: 1px solid var(--theme-text-borders);
   inline-size: 25px;
@@ -108,8 +109,8 @@
 
 .header__rec {
   position: absolute;
-  top: 10px;
-  right: 29px;
+  inset-block-start: var(--page-padding);
+  inset-inline-end: calc(var(--page-padding) + 3px + 25px);
   font-weight: var(--font-weight-min);
   color: var(--bg-text-color);
   line-height: 1.3em;
@@ -126,19 +127,18 @@
   background-color: var(--bg-text-color);
   block-size: 5px;
   inline-size: 5px;
-  inset-inline-end: -10px;
+  inset-inline-end: -15px;
   inset-block-start: 10px;
   visibility: var(--visible);
 }
 
 /*main*/
 .main {
-  padding: 40px 0 40px 0;
+  padding: 40px 10px 40px 10px;
   display: flex;
   flex-direction: column;
   gap: 50px;
   background-color: var(--bg-color);
-  padding: 10px;
 }
 
 .concentration__article:not(:last-child) {
@@ -208,22 +208,31 @@
   margin-bottom: 10px;
 }
 
+.concentration__subheading--mb {
+  margin-bottom: 20px;
+}
+
 /*footer*/
 
 .footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 10px;
+  padding: var(--page-padding);
   height: 100vh;
   min-height: 375px;
   background-color: var(--bg-color);
 }
 
+.footer__heading {
+  text-shadow: 2px 2px 0 var(--bg-text-color);
+}
+
 
 @media (width >= 768px) {
-  .header {
-    padding: 20px;
+
+  :root {
+    --page-padding: 20px;
   }
 
   .main {
@@ -232,18 +241,20 @@
 
   }
 
-  .footer {
-    padding: 20px;
-  }
-
   .why, .how {
     display: grid;
     grid-template-columns: 1fr 2fr;
     gap: 20px;
   }
 
+  .what .concentration__heading {
+    width: calc(100% / 3 - 20px);
+  }
+
   .heading {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
     justify-self: left;
+    margin-left: -15px;
   }
 
   .concentration__images-wrapper {
@@ -292,5 +303,9 @@
 
   .header__theme-menu-list {
     flex-direction: row;
+  }
+
+  .pictures .concentration__heading {
+    margin-bottom: 20px;
   }
 }
