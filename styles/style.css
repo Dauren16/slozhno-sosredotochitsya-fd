@@ -285,6 +285,10 @@
   .pictures .concentration__heading {
     margin-bottom: 20px;
   }
+
+  .footer__heading {
+    margin-left: 0;
+  }
 }
 
 @media (width >= 1024px) {
