@@ -254,7 +254,7 @@
   .heading {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
     justify-self: left;
-    margin-left: -15px;
+    margin-left: -18px;
   }
 
   .concentration__images-wrapper {
