@@ -41,8 +41,8 @@
 .decorated-zone::after {
   content: "";
   position: absolute;
-  bottom: 10px;
-  left: 10px;
+  bottom: var(--page-padding);
+  left: var(--page-padding);
   border-inline-start: 1px solid var(--theme-text-borders);
   border-block-end: 1px solid var(--theme-text-borders);
   inline-size: 25px;
@@ -281,6 +281,10 @@
   .header__descr {
     width: calc(100% / 2);
   }
+
+  .pictures .concentration__heading {
+    margin-bottom: 20px;
+  }
 }
 
 @media (width >= 1024px) {
@@ -290,7 +294,6 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
   }
-
 
   .why, .how {
     grid-template-columns: calc((100% - 2 * 20 / 3)) 1fr;
@@ -303,9 +306,5 @@
 
   .header__theme-menu-list {
     flex-direction: row;
-  }
-
-  .pictures .concentration__heading {
-    margin-bottom: 20px;
   }
 }
