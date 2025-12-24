@@ -2,11 +2,6 @@
 
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
-  background-attachment: fixed;
-  background-image: var(--bg-image);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
   font-family: var(--font-family);
   font-size: var(--font-size);
 }
@@ -19,6 +14,11 @@
   align-items: center;
   justify-items: end;
   padding: var(--page-padding);
+  background-attachment: fixed;
+  background-image: var(--bg-image);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .decorated-zone {
