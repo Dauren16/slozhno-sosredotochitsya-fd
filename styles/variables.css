@@ -10,7 +10,7 @@
   --heading-text-color: #000028;
   --main-heading-color: #DB00FF;
   --bg-color: #000028;
-  --bg-image: url('/images/cover-image-dark.png');
+  --bg-image: url('../images/cover-image-dark.png');
   --visible: visible;
   --page-padding: 10px;
 }

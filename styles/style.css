@@ -9,6 +9,7 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  background-color: var(--bg-color);
 }
 
 /*header*/
@@ -80,12 +81,8 @@
   border-bottom: 1px solid var(--theme-text-borders);
 }
 
-.header__theme-menu-button:active {
+.header__theme-menu-button_active {
   outline: 1px solid var(--theme-text-borders);
-}
-
-.header__theme-menu-button--active {
-  border: 1px solid var(--theme-text-borders);
   pointer-events: none;
 }
 
@@ -202,6 +199,10 @@
 
 .concentration__link:focus {
   outline: none;
+}
+
+.concentration__link:focus-visible {
+  outline: 1px solid var(--primary-text-color);
 }
 
 .pictures .concentration__heading {
