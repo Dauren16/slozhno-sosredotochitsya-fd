@@ -14,3 +14,11 @@
   --visible: visible;
   --page-padding: 10px;
 }
+
+@media (width >= 768px) {
+  :root {
+    --page-padding: 20px;
+  }
+}
+
+

@@ -232,17 +232,13 @@
 
 @media (width >= 768px) {
 
-  :root {
-    --page-padding: 20px;
-  }
-
   .main {
     gap: 80px;
     padding: 60px 20px 60px 20px;
 
   }
 
-  .why, .how {
+  .concentration-column {
     display: grid;
     grid-template-columns: 1fr 2fr;
   }
@@ -299,7 +295,7 @@
     gap: 20px;
   }
 
-  .why, .how {
+  .concentration-column {
     grid-template-columns: calc((100% - 2 * 20px) / 3) 1fr;
   }
 
